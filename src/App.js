@@ -1,13 +1,13 @@
 import React from "react";
-import ReactDOM from "react-dom";
-
+import Header from "./components/Header";
+import Pet from "./components/Pet";
 const App = () => {
   return (
     <div className="app">
-      <h1>Pet Searcher App</h1>
+      <Header />
+      <Pet />
     </div>
   );
 };
 
-const render = document.getElementById("root");
-ReactDOM.render(<App />, render);
+export default App;
