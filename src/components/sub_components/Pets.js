@@ -3,10 +3,7 @@ import { ANIMALS } from "@frontendmasters/pet";
 
 const Pets = () => {
   const [animals, setAnimals] = useState("");
-  const ChoosedAnimal = (e) => {
-    const Animal = e.target.value;
-    setAnimals(Animal);
-  };
+
   return (
     <div className="pets">
       <label htmlFor="chooseAnimal">
@@ -17,8 +14,11 @@ const Pets = () => {
           onChange={ChoosedAnimal}
           onBlur={ChoosedAnimal}
         >
+          <option>--Select the option--</option>
           {ANIMALS.map((value) => (
-            <option>{value}</option>
+            <option key={value} value={value}>
+              {value}
+            </option>
           ))}
         </select>
       </label>
