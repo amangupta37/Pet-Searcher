@@ -2,6 +2,7 @@ import React from "react";
 import Location from "./sub_components/Location";
 import Pets from "./sub_components/Pets";
 import Breeds from "./sub_components/Breeds";
+
 const Pet = () => {
   return (
     <div className="pet">

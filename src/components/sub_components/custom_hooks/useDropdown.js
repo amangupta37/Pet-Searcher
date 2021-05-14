@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 
 const useDropdown = (lable, defaultState, options) => {
-  const [state, setstate] = useState(defaultState);
+  const [state, setState] = useState(defaultState);
 
   const id = 'use-dropdown-${lable.replace(" " , "").toLowerCase()}';
 
   const Dropdown = () => {
     const event = (e) => {
       const data = e.target.value;
-      setstate(data);
+      setState(data);
     };
 
     return (

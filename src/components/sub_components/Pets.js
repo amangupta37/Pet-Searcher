@@ -1,27 +1,13 @@
 import React, { useState } from "react";
 import { ANIMALS } from "@frontendmasters/pet";
+import useDropdown from "./custom_hooks/useDropdown";
 
 const Pets = () => {
-  const [animals, setAnimals] = useState("");
+  const [animal, AnimalDropdown] = useDropdown("Animal", "dog", ANIMALS);
 
   return (
-    <div className="pets">
-      <label htmlFor="chooseAnimal">
-        Animals :
-        <select
-          id="chooseAnimal"
-          value={animals}
-          onChange={ChoosedAnimal}
-          onBlur={ChoosedAnimal}
-        >
-          <option>--Select the option--</option>
-          {ANIMALS.map((value) => (
-            <option key={value} value={value}>
-              {value}
-            </option>
-          ))}
-        </select>
-      </label>
+    <div>
+      <AnimalDropdown />
     </div>
   );
 };
